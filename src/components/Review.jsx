@@ -19,7 +19,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const reviews = [
   {
-    content: "Exceptional developer. Delivered a seamless, responsive & smooth result.",
+    content: "Friendly & exceptional developer. Delivered a seamless, responsive & smooth result.",
     name: "Sophia Ramirez",
     imgSrc: people1,
     company: "PixelForge",
