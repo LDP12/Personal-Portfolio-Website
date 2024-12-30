@@ -15,7 +15,7 @@ import { useGSAP } from '@gsap/react';
 /**
  * Register gsap plugins
  */
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 
 /**
