@@ -1,6 +1,6 @@
 {
   "name": "luke-penney",
-  "private": true,
+  "private": false,
   "homepage": "https://ldp12.github.io/Personal-Portfolio-Website/",
   "version": "0.0.0",
   "type": "module",
