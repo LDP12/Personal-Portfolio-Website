@@ -11,37 +11,37 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
   {
-    imgSrc: 'public/images/project-1.jpg',
+    imgSrc: 'images/project-1.jpg',
     title: 'Full Stack Music App',
     tags: ['API', 'MVC', 'Development'],
     projectLink: 'https://example.com/'
   },
   {
-    imgSrc: 'public/images/project-2.jpg',
+    imgSrc: 'images/project-2.jpg',
     title: 'Free Stock Photo App',
     tags: ['API', 'SPA'],
     projectLink: 'https://example.com/'
   },
   {
-    imgSrc: 'public/images/project-3.jpg',
+    imgSrc: 'images/project-3.jpg',
     title: 'Recipe App',
     tags: ['Development', 'API'],
     projectLink: 'https://example.com/'
   },
   {
-    imgSrc: 'public/images/project-4.jpg',
+    imgSrc: 'images/project-4.jpg',
     title: 'Real Estate Website',
     tags: ['Web-design', 'Development'],
     projectLink: 'https://example.com/'
   },
   {
-    imgSrc: 'public/images/project-5.jpg',
+    imgSrc: 'images/project-5.jpg',
     title: 'eCommerce Website',
     tags: ['eCommerce', 'Development'],
     projectLink: 'https://example.com/'
   },
   {
-    imgSrc: 'public/images/project-6.jpg',
+    imgSrc: 'images/project-6.jpg',
     title: 'vCard Personal Portfolio',
     tags: ['Web-design', 'Development'],
     projectLink: 'https://example.com/'
