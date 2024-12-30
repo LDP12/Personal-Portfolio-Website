@@ -149,3 +149,12 @@ body {
 .text-field::placeholder {
   @apply text-zinc-400
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
