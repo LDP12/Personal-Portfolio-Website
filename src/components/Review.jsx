@@ -1,9 +1,4 @@
 /**
- * @copyright 2024 Luke Penney
- * @license Apache-2.0
- */
-
-/**
  * Node modules
  */
 import { useRef } from "react";
@@ -12,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import ReviewCard from "./ReviewCard";
 
-// Import each image from src/assets/images
 import people1 from "../assets/images/people-1.jpg";
 import people2 from "../assets/images/people-2.jpg";
 import people3 from "../assets/images/people-3.jpg";
@@ -66,33 +60,35 @@ const Review = () => {
   const reviewContainerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.to(".scrub-slide", {
+    /*
+     * Animate the parent wrapper with the horizontal scrub:
+     *   - This preserves the ability of the *child* to scroll horizontally
+     *     with arrow buttons, because we are no longer applying transform
+     *     to the scrollable element itself.
+     */
+    gsap.to(".scrub-slide-parent", {
       scrollTrigger: {
-        trigger: ".scrub-slide",
+        trigger: ".scrub-slide-parent",
         start: "-200% 80%",
         end: "400% 80%",
         scrub: true,
       },
-      x: "-1000",
+      x: -1000, // The "animated" effect
     });
   });
 
   const scrollLeft = () => {
-    if (reviewContainerRef.current) {
-      reviewContainerRef.current.scrollBy({
-        left: -300, // Adjust scroll distance as needed
-        behavior: "smooth",
-      });
-    }
+    reviewContainerRef.current?.scrollBy({
+      left: -300,
+      behavior: "smooth",
+    });
   };
 
   const scrollRight = () => {
-    if (reviewContainerRef.current) {
-      reviewContainerRef.current.scrollBy({
-        left: 300, // Adjust scroll distance as needed
-        behavior: "smooth",
-      });
-    }
+    reviewContainerRef.current?.scrollBy({
+      left: 300,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -101,26 +97,33 @@ const Review = () => {
           <h2 className="headline-2 mb-8 reveal-up">What my customers say</h2>
 
           <div className="relative">
-            {/* Add scrollable container */}
-            <div
-                ref={reviewContainerRef}
-                className="scrub-slide flex items-stretch gap-3 w-fit overflow-x-scroll scrollbar-hide"
-            >
-              {reviews.map(({ content, name, imgSrc, company }, key) => (
-                  <ReviewCard
-                      key={key}
-                      name={name}
-                      imgSrc={imgSrc}
-                      company={company}
-                      content={content}
-                  />
-              ))}
+            {/*
+            1) Parent wrapper:
+               - We apply x:-1000 here with GSAP.
+            2) The child .scrub-slide remains free to do native horizontal scroll.
+          */}
+            <div className="scrub-slide-parent">
+              <div
+                  ref={reviewContainerRef}
+                  className="scrub-slide flex items-stretch gap-3 w-fit overflow-x-scroll scrollbar-hide"
+              >
+                {reviews.map(({ content, name, imgSrc, company }, key) => (
+                    <ReviewCard
+                        key={key}
+                        name={name}
+                        imgSrc={imgSrc}
+                        company={company}
+                        content={content}
+                    />
+                ))}
+              </div>
             </div>
 
             {/* Left Arrow */}
             <button
                 onClick={scrollLeft}
-                className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700"
+                className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800
+                       text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700"
             >
               ‹
             </button>
@@ -128,7 +131,8 @@ const Review = () => {
             {/* Right Arrow */}
             <button
                 onClick={scrollRight}
-                className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700"
+                className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800
+                       text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700"
             >
               ›
             </button>
