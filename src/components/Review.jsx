@@ -60,12 +60,6 @@ const Review = () => {
   const reviewContainerRef = useRef(null);
 
   useGSAP(() => {
-    /*
-     * Animate the parent wrapper with the horizontal scrub:
-     *   - This preserves the ability of the *child* to scroll horizontally
-     *     with arrow buttons, because we are no longer applying transform
-     *     to the scrollable element itself.
-     */
     gsap.to(".scrub-slide-parent", {
       scrollTrigger: {
         trigger: ".scrub-slide-parent",
@@ -73,7 +67,7 @@ const Review = () => {
         end: "400% 80%",
         scrub: true,
       },
-      x: -1000, // The "animated" effect
+      x: -1000,
     });
   });
 
@@ -97,11 +91,6 @@ const Review = () => {
           <h2 className="headline-2 mb-8 reveal-up">What my customers say</h2>
 
           <div className="relative">
-            {/*
-            1) Parent wrapper:
-               - We apply x:-1000 here with GSAP.
-            2) The child .scrub-slide remains free to do native horizontal scroll.
-          */}
             <div className="scrub-slide-parent">
               <div
                   ref={reviewContainerRef}
