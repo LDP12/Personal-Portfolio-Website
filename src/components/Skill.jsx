@@ -11,37 +11,37 @@ import SkillCard from "./SkillCard";
 
 const skillItem = [
   {
-    imgSrc: '/public/images/figma.svg',
+    imgSrc: 'public/images/figma.svg',
     label: 'Figma',
     desc: 'Design tool'
   },
   {
-    imgSrc: '/public/images/css3.svg',
+    imgSrc: 'public/images/css3.svg',
     label: 'CSS',
     desc: 'User Interface'
   },
   {
-    imgSrc: '/public/images/javascript.svg',
+    imgSrc: 'public/images/javascript.svg',
     label: 'JavaScript',
     desc: 'Interaction'
   },
   {
-    imgSrc: '/public/images/nodejs.svg',
+    imgSrc: 'public/images/nodejs.svg',
     label: 'NodeJS',
     desc: 'Web Server'
   },
   {
-    imgSrc: '/public/images/mongodb.svg',
+    imgSrc: 'public/images/mongodb.svg',
     label: 'MongoDB',
     desc: 'Database'
   },
   {
-    imgSrc: '/public/images/react.svg',
+    imgSrc: 'public/images/react.svg',
     label: 'React',
     desc: 'Framework'
   },
   {
-    imgSrc: '/public/images/tailwindcss.svg',
+    imgSrc: 'public/images/tailwindcss.svg',
     label: 'TailwindCSS',
     desc: 'User Interface'
   },
