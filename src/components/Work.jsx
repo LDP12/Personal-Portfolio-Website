@@ -8,74 +8,74 @@
  */
 import ProjectCard from "./ProjectCard";
 
+// Import each project image
+import project1 from "../assets/images/project-1.jpg";
+import project2 from "../assets/images/project-2.jpg";
+import project3 from "../assets/images/project-3.jpg";
+import project4 from "../assets/images/project-4.jpg";
+import project5 from "../assets/images/project-5.jpg";
+import project6 from "../assets/images/project-6.jpg";
 
 const works = [
   {
-    imgSrc: 'images/project-1.jpg',
-    title: 'Full Stack Music App',
-    tags: ['API', 'MVC', 'Development'],
-    projectLink: 'https://example.com/'
+    imgSrc: project1,
+    title: "Full Stack Music App",
+    tags: ["API", "MVC", "Development"],
+    projectLink: "https://example.com/"
   },
   {
-    imgSrc: 'images/project-2.jpg',
-    title: 'Free Stock Photo App',
-    tags: ['API', 'SPA'],
-    projectLink: 'https://example.com/'
+    imgSrc: project2,
+    title: "Free Stock Photo App",
+    tags: ["API", "SPA"],
+    projectLink: "https://example.com/"
   },
   {
-    imgSrc: 'images/project-3.jpg',
-    title: 'Recipe App',
-    tags: ['Development', 'API'],
-    projectLink: 'https://example.com/'
+    imgSrc: project3,
+    title: "Recipe App",
+    tags: ["Development", "API"],
+    projectLink: "https://example.com/"
   },
   {
-    imgSrc: 'images/project-4.jpg',
-    title: 'Real Estate Website',
-    tags: ['Web-design', 'Development'],
-    projectLink: 'https://example.com/'
+    imgSrc: project4,
+    title: "Real Estate Website",
+    tags: ["Web-design", "Development"],
+    projectLink: "https://example.com/"
   },
   {
-    imgSrc: 'images/project-5.jpg',
-    title: 'eCommerce Website',
-    tags: ['eCommerce', 'Development'],
-    projectLink: 'https://example.com/'
+    imgSrc: project5,
+    title: "eCommerce Website",
+    tags: ["eCommerce", "Development"],
+    projectLink: "https://example.com/"
   },
   {
-    imgSrc: 'images/project-6.jpg',
-    title: 'vCard Personal Portfolio',
-    tags: ['Web-design', 'Development'],
-    projectLink: 'https://example.com/'
-  },
+    imgSrc: project6,
+    title: "vCard Personal Portfolio",
+    tags: ["Web-design", "Development"],
+    projectLink: "https://example.com/"
+  }
 ];
 
 const Work = () => {
   return (
-    <section
-      id="work"
-      className="section"
-    >
-      <div className="container">
+      <section id="work" className="section">
+        <div className="container">
+          <h2 className="headline-2 mb-8 reveal-up">My portfolio highlights</h2>
 
-        <h2 className="headline-2 mb-8 reveal-up">
-          My portfolio highlights
-        </h2>
-
-        <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
-          {works.map(({ imgSrc, title, tags, projectLink }, key) => (
-            <ProjectCard
-              key={key}
-              imgSrc={imgSrc}
-              title={title}
-              tags={tags}
-              projectLink={projectLink}
-              classes="reveal-up"
-            />
-          ))}
+          <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
+            {works.map(({ imgSrc, title, tags, projectLink }, key) => (
+                <ProjectCard
+                    key={key}
+                    imgSrc={imgSrc}
+                    title={title}
+                    tags={tags}
+                    projectLink={projectLink}
+                    classes="reveal-up"
+                />
+            ))}
+          </div>
         </div>
+      </section>
+  );
+};
 
-      </div>
-    </section>
-  )
-}
-
-export default Work
+export default Work;
