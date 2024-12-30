@@ -19,37 +19,37 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const reviews = [
   {
-    content: "Exceptional web development! Delivered a seamless, responsive site...",
+    content: "Exceptional web development! Delivered a seamless, responsive site.",
     name: "Sophia Ramirez",
     imgSrc: people1,
     company: "PixelForge",
   },
   {
-    content: "Impressive work! Fast loading times, intuitive design...",
+    content: "Impressive work! Fast loading times, intuitive design.",
     name: "Ethan Caldwell",
     imgSrc: people2,
     company: "NexaWave",
   },
   {
-    content: "Outstanding developer! Built a robust site with perfect functionality...",
+    content: "Outstanding developer! Built a robust site with perfect functionality.",
     name: "Liam Bennett",
     imgSrc: people3,
     company: "CodeCraft",
   },
   {
-    content: "Creative and skilled! Produced a modern, user-friendly site...",
+    content: "Creative and skilled! Produced a modern, user-friendly site.",
     name: "Noah Williams",
     imgSrc: people4,
     company: "BrightWeb",
   },
   {
-    content: "Professional work! Delivered on time, with a polished design...",
+    content: "Professional work! Delivered on time, with a polished design.",
     name: "Ava Thompson",
     imgSrc: people5,
     company: "TechMosaic",
   },
   {
-    content: "Excellent project execution! High-quality code, responsive design...",
+    content: "Excellent project execution! High-quality code, responsive design.",
     name: "Jonathan",
     imgSrc: people6,
     company: "Skyline Digital",
