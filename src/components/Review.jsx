@@ -1,4 +1,9 @@
 /**
+ * @copyright 2024 Luke Penney
+ * @license Apache-2.0
+ */
+
+/**
  * Node modules
  */
 import { useRef } from "react";
