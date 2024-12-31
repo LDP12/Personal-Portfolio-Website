@@ -11,6 +11,7 @@ import { ButtonPrimary, ButtonOutline } from "./Button";
 // 1) Import images
 import avatar1 from "../assets/images/avatar-1.jpg";
 import heroBanner from "../assets/images/hero-banner.jpg";
+import CV from "../assets/Documents/My_CV.pdf";
 
 const Hero = () => {
   return (
@@ -45,7 +46,7 @@ const Hero = () => {
               <ButtonPrimary
                   label="Download CV"
                   icon="download"
-                  href="public/Documents/My_CV.pdf"
+                  href={CV}
                   download={true}
               />
               <ButtonOutline href="#about" label="Scroll down" icon="arrow_downward" />
