@@ -8,7 +8,6 @@
  */
 import ProjectCard from "./ProjectCard";
 
-// Import each project image
 import project1 from "../assets/images/project-1.jpg";
 import project2 from "../assets/images/project-2.jpg";
 import project3 from "../assets/images/project-3.jpg";
