@@ -13,8 +13,6 @@ import project1 from "../assets/images/project-1.jpg";
 import project2 from "../assets/images/project-2.jpg";
 import project3 from "../assets/images/project-3.jpg";
 import project4 from "../assets/images/project-4.jpg";
-import project5 from "../assets/images/project-5.jpg";
-import project6 from "../assets/images/project-6.jpg";
 
 const works = [
   {
@@ -31,28 +29,16 @@ const works = [
   },
   {
     imgSrc: project3,
-    title: "Recipe App",
-    tags: ["Development", "API"],
-    projectLink: "https://example.com/"
-  },
-  {
-    imgSrc: project4,
     title: "Real Estate Website",
     tags: ["Web-design", "Development"],
     projectLink: "https://example.com/"
   },
   {
-    imgSrc: project5,
+    imgSrc: project4,
     title: "eCommerce Website",
     tags: ["eCommerce", "Development"],
     projectLink: "https://example.com/"
   },
-  {
-    imgSrc: project6,
-    title: "vCard Personal Portfolio",
-    tags: ["Web-design", "Development"],
-    projectLink: "https://example.com/"
-  }
 ];
 
 const Work = () => {
