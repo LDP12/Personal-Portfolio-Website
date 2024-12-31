@@ -76,14 +76,20 @@ const Review = () => {
     });
   });
 
-  const scrollLeft = () => {
-    reviewContainerRef.current?.scrollBy({
-      left: -300,
-      behavior: "smooth",
-    });
+  const scrollLeft = (event) => {
+    event.preventDefault();
+    if (reviewContainerRef.current) {
+      reviewContainerRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    } else {
+      console.error("reviewContainerRef is null");
+    }
   };
 
-  const scrollRight = () => {
+  const scrollRight = (event) => {
+    event.preventDefault();
     reviewContainerRef.current?.scrollBy({
       left: 300,
       behavior: "smooth",
