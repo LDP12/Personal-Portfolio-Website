@@ -8,20 +8,26 @@
  */
 import SkillCard from "./SkillCard";
 
-// Import each logo from src/assets/images
 import figma from "../assets/images/figma.svg";
 import css3 from "../assets/images/css3.svg";
 import javascript from "../assets/images/javascript.svg";
-import nodejs from "../assets/images/nodejs.svg";
-import mongodb from "../assets/images/mongodb.svg";
+import dotnet from "../assets/images/dotnet.svg";
 import reactLogo from "../assets/images/react.svg";
 import tailwindcss from "../assets/images/tailwindcss.svg";
+import csharp from "../assets/images/csharp.svg";
+import mysql from "../assets/images/mysql.svg";
+import rider from "../assets/images/rider.svg";
 
 const skillItem = [
   {
+    imgSrc: rider,
+    label: "Jetbrains Rider",
+    desc: "IDE"
+  },
+  {
     imgSrc: figma,
     label: "Figma",
-    desc: "Design tool"
+    desc: "Design Tool"
   },
   {
     imgSrc: css3,
@@ -34,16 +40,6 @@ const skillItem = [
     desc: "Interaction"
   },
   {
-    imgSrc: nodejs,
-    label: "NodeJS",
-    desc: "Web Server"
-  },
-  {
-    imgSrc: mongodb,
-    label: "MongoDB",
-    desc: "Database"
-  },
-  {
     imgSrc: reactLogo,
     label: "React",
     desc: "Framework"
@@ -52,6 +48,21 @@ const skillItem = [
     imgSrc: tailwindcss,
     label: "TailwindCSS",
     desc: "User Interface"
+  },
+  {
+    imgSrc: csharp,
+    label: "CSharp",
+    desc: "Functionality"
+  },
+  {
+    imgSrc: dotnet,
+    label: ".NET Core",
+    desc: "Framework"
+  },
+  {
+    imgSrc: mysql,
+    label: "MySQL",
+    desc: "Database"
   }
 ];
 
