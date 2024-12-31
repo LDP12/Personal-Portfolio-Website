@@ -8,7 +8,6 @@
  */
 import { ButtonPrimary, ButtonOutline } from "./Button";
 
-// 1) Import images
 import avatar1 from "../assets/images/avatar-1.jpg";
 import heroBanner from "../assets/images/hero-banner.jpg";
 import CV from "../assets/Documents/My_CV.pdf";
