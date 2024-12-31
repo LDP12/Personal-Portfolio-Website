@@ -82,7 +82,7 @@ const Review = () => {
   return (
       <section id="reviews" className="section overflow-hidden">
         <div className="container">
-          <h2 className="headline-2 mb-8 reveal-up">What our customers say</h2>
+          <h2 className="headline-2 mb-8 reveal-up">Reviews from my customers</h2>
 
           <div className="scrub-slide flex items-stretch gap-3 w-fit">
             {reviews.map(({ content, name, imgSrc, company }, key) => (
