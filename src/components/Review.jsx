@@ -78,14 +78,10 @@ const Review = () => {
 
   const scrollLeft = (event) => {
     event.preventDefault();
-    if (reviewContainerRef.current) {
-      reviewContainerRef.current.scrollBy({
-        left: -300,
-        behavior: "smooth",
-      });
-    } else {
-      console.error("reviewContainerRef is null");
-    }
+    reviewContainerRef.current?.scrollBy({
+      left: -300,
+      behavior: "smooth",
+    });
   };
 
   const scrollRight = (event) => {
